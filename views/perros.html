@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Cuidadores y Perros</title>
+</head>
+<body>
+    <a href="/login">Login</a>
+    <h1>Cuidadores</h1>
+    <table border="10">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Teléfono</th>
+        </tr>
+        {% for cuidador in cuidadores %}
+        <tr>
+            <td>{{ cuidador.ID }}</td>
+            <td>{{ cuidador.Nombre }}</td>
+            <td>{{ cuidador.Telefono }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h1>Perros</h1>
+    <table border="10">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Raza</th>
+            <th>Edad</th>
+            <th>Peso</th>
+            <th>ID Cuidador</th>
+        </tr>
+        {% for perro in perros %}
+        <tr>
+            <td>{{ perro.ID }}</td>
+            <td>{{ perro.Nombre }}</td>
+            <td>{{ perro.Raza }}</td>
+            <td>{{ perro.Edad }}</td>
+            <td>{{ perro.Peso }}</td>
+            <td>{{ perro.Id_cuidador }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
